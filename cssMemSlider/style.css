@@ -21,8 +21,8 @@ h1 {
   overflow: hidden;
 }
 .center {
-  position: fixed;
-  top: 15rem;
+  position: relative;
+  top: 11vh;
   left: 50%;
   transform: translate(-50%);
 }
@@ -137,20 +137,57 @@ input[name='r'] {
   transition: ease-in-out 0.1s;
 }
 
-@media  (max-width: 1000px) {
+@media all and  (max-width: 1000px) and (min-width: 510px) {
   .slider {
     width: 30rem;
     height: 24rem;
   }
   .slides {
-    height: 15rem;
+    height: 17rem;
   }
   .nav {
     left: 50%;
     transform: translate(-50%);
-    bottom: 4rem;
+    bottom: 3.3rem;
   }
   .info {
     bottom: 3rem;
   }
+}
+@media all and  (max-width: 510px) {
+  .slider {
+    width: 17rem;
+    height: 17rem;
+  }
+  .slides {
+    height: 10rem;
+  }
+  .nav {
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 4.5rem;
+  }
+  .bar {
+    padding: 0.6rem;
+    cursor: pointer;
+  }
+  .bar:hover > .box-bar {
+    border: 0.1rem solid white;
+  }
+  .box-bar {
+    width: 0.4rem;
+    height: 0.4rem;
+    border: 0.1rem solid rgb(114, 114, 179);
+  }
+  .info {
+    bottom: 4rem;
+  }
+  .text {
+    width: 10rem;
+    position: fixed;
+    visibility: hidden;
+    margin-left: 10rem;
+    font-size: 0.8rem;
+  }
+  
 }
