@@ -22,9 +22,9 @@ h1 {
 }
 .center {
   position: absolute;
-  top: 50%;
+  top: 200px;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
 }
 .nav {
   position: absolute;
@@ -76,4 +76,30 @@ input[name='r'] {
   left: 20px;
   color: white;
   visibility: hidden;
+}
+
+
+#r1:checked ~ .nav > .bar:nth-child(1) {
+  background: none;
+}
+#r2:checked ~ .nav > .bar:nth-child(2) {
+  background: none;
+}
+#r3:checked ~ .nav > .bar:nth-child(3) {
+  background: none;
+}
+#r4:checked ~ .nav > .bar:nth-child(4) {
+  background: none;
+}
+#r1:checked ~ .s1 {
+  margin-left: 0;
+}
+#r2:checked ~ .s1 {
+  margin-left: -25%;
+}
+#r3:checked ~ .s1 {
+  margin-left: -50%;
+}
+#r4:checked ~ .s1 {
+  margin-left: -75%;
 }
