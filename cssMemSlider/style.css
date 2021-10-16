@@ -10,51 +10,56 @@ header {
   text-align: center;
   background-color: black;
   justify-content: center;
-  padding: 30px 0 30px 0;
+  padding: 3rem 0 3rem 0;
 }
 h1 {
   color: white;
 }
 .slider {
-  width: 900px;
-  height: 700px;
+  width: 60rem;
+  height: 44rem;
   overflow: hidden;
 }
 .center {
-  position: absolute;
-  top: 200px;
+  position: fixed;
+  top: 15rem;
   left: 50%;
   transform: translate(-50%);
 }
 .nav {
-  position: absolute;
-  bottom: 30px;
-  right: 0px;
+  position: fixed;
+  bottom: 2.1rem;
+  right: 0;
   display: flex;
 }
 .bar {
-  padding: 15px;
+  padding: 1rem;
   cursor: pointer;
 }
+.bar:hover > .box-bar {
+  background: white;
+  border: 0.2rem solid white;
+  background: white;
+}
+.bar:active > .box-bar {
+  opacity: 0.5;
+}
 .box-bar {
-  width: 10px;
-  height: 10px;
+  width: 1rem;
+  height: 1rem;
   background: rgb(114, 114, 179);
   border-radius: 50%;
-  border: 2px solid rgb(114, 114, 179);
+  border: 0.2rem solid rgb(114, 114, 179);
   cursor: pointer;
   transition: ease-in-out 0.5s;
 }
-.box-bar:hover {
-  background: white;
-}
 input[name='r'] {
-  position: absolute;
+  position: fixed;
   visibility: hidden;
 }
 .slides {
   width: 400%;
-  height: 600px;
+  height: 37rem;
   display: flex;
 }
 .slide {
@@ -64,23 +69,22 @@ input[name='r'] {
 .slide img {
   width: 100%;
   height: 100%;
-  border-radius: 30px;
+  border-radius: 2rem;
 }
 .info {
-  position: absolute;
-  bottom: 70px;
+  position: fixed;
+  bottom: 4.7rem;
   color: white;
   display: flex;
 }
 .text {
-  width: 300px;
+  width: 33.5rem;
   font-weight: bold;
-  position: absolute;
+  position: fixed;
   color: white;
   visibility: hidden;
-  opacity: 0;
-  margin-left: 3rem;
-  font-size: 1.2rem;
+  margin-left: 30rem;
+  font-size: 1.4rem;
 }
 
 
@@ -112,23 +116,41 @@ input[name='r'] {
   visibility: visible;
   opacity: 1;
   margin-left: 0;
-  transition: ease-in-out 1s;
+  transition: ease-in-out 0.1s;
 }
 #r2:checked ~ .info > .text:nth-child(2) {
   visibility: visible;
   opacity: 1;
   margin-left: 0;
-  transition: ease-in-out 1s;
+  transition: ease-in-out 0.1s;
 }
 #r3:checked ~ .info > .text:nth-child(3) {
   visibility: visible;
   opacity: 1;
   margin-left: 0;
-  transition: ease-in-out 1s;
+  transition: ease-in-out 0.1s;
 }
 #r4:checked ~ .info > .text:nth-child(4) {
   visibility: visible;
   opacity: 1;
   margin-left: 0;
-  transition: ease-in-out 1s;
+  transition: ease-in-out 0.1s;
+}
+
+@media  (max-width: 1000px) {
+  .slider {
+    width: 30rem;
+    height: 24rem;
+  }
+  .slides {
+    height: 15rem;
+  }
+  .nav {
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 4rem;
+  }
+  .info {
+    bottom: 3rem;
+  }
 }
